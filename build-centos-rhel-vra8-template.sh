@@ -148,4 +148,4 @@ systemctl enable runonce.service
 /etc/cloud/clean.sh
 
 ###shutdown os. ###
-#shutdown -h now
+shutdown -h now
