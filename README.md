@@ -1,4 +1,4 @@
-# cloud-init-image-prep-scripts
+# cloud-init-vSphere-image-prep-scripts
 
 
 There are 4 scripts that you can execute on base CentOs/RHEL or Ubuntu to install cloud-init and configure the image template to work with vSphere customization with dhcp or ip static assigments
