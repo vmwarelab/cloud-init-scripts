@@ -9,6 +9,19 @@ sudo apt-get -y install cloud-init
 ###install perl ### 
 sudo apt-get -y install perl
 
+#!/bin/bash
+
+# Add any usernames you want to add to /etc/sudoers for passwordless sudo
+users=("cloudadmin")
+
+for user in "${users[@]}"
+do
+cat /etc/sudoers | grep ^$user
+RC=$?
+if [ $RC != 0 ]; then
+bash -c "echo \"$user ALL=(ALL) NOPASSWD:ALL\" >> /etc/sudoers"
+fi
+done
 ###disable vmware customization for cloud-init. ###
 sudo sed -i 's/^disable_root: true/disable_root: false/g' /etc/cloud/cloud.cfg
 sudo sed -i '/^preserve_hostname: false/a\disable_vmware_customization: true' /etc/cloud/cloud.cfg
