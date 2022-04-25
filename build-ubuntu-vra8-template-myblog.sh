@@ -50,7 +50,7 @@ cat <<EOF > /etc/cloud/runonce.sh
  
 sudo rm -rf /etc/cloud/cloud-init.disabled
 sudo cloud-init init
-sleep 20
+sudo sleep 20
 sudo cloud-init modules --mode config
 sudo sleep 20
 sudo cloud-init modules --mode final
