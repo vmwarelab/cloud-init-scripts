@@ -15,7 +15,8 @@ Though there are some tools (e.g. dos2unix) available to convert between DOS/Win
 
 
 #Shell
-perl -pe '$_=~s#\r\n#\n#' < your-prep-script.txt 
+perl -pe '$_=~s#\r\n#\n#' < your-prep-script.txt
+
 sed -r 's/\r$//' your-prep-script.txt
 
 
