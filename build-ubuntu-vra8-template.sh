@@ -38,10 +38,8 @@ sudo sed -i '/^network:/a\  config: disabled' /etc/cloud/cloud.cfg
 ###disalbe clean tmp folder. ### 
 sudo sed -i 's/D/#&/' /usr/lib/tmpfiles.d/tmp.conf
 
-###Add After=dbus.service to open-vm-tools for Ubuntu 16 and 18 ### 
-sudo sed -i '/^After=vgauthd.service/a\After=dbus.service' /lib/systemd/system/open-vm-tools.service
 
-###Add After=dbus.service to open-vm-tools for Ubuntu 20 ### 
+###Add After=dbus.service to open-vm-tools  ### 
 sudo sed -i '/^After=vgauth.service/a\After=dbus.service' /lib/systemd/system/open-vm-tools.service
 
 ###disable cloud-init in first boot,we use vmware tools exec customization. ### 
