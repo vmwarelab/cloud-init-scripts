@@ -13,9 +13,9 @@ Make sure to Convert Windows-style line endings to Unix-style otherwise you will
 
 Though there are some tools (e.g. dos2unix) available to convert between DOS/Windows (\r\n) and Unix (\n) line endings, you'd sometimes like to solve this rather simple task with tools available on any linux box you connect to. So, here are some examples - just pick the one that fits you best:
 
-
-#Shell
 perl -pe '$_=~s#\r\n#\n#' < your-prep-script.txt
+
+or
 
 sed -r 's/\r$//' your-prep-script.txt
 
