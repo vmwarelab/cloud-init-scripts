@@ -79,7 +79,7 @@ EOF
 ##crontab - adds all the printed stuff into the crontab file. 
 ##You can see the effect by doing a new crontab -l.
 
-crontab -l | { cat; echo "@reboot ( sleep 30 ; sh /etc/cloud/runonce.sh )"; } | crontab -
+crontab -l | { cat; echo "@reboot ( sleep 90 ; sh /etc/cloud/runonce.sh )"; } | crontab -
 crontab -l
 
 ###Create a cleanup script for build vra template. ### 
