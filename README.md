@@ -11,13 +11,8 @@ There are two files for each of the linux distro, the ones with a myblog at the 
 Make sure to Convert Windows-style line endings to Unix-style otherwise you will get an error like this when you try to execute the script :
 "Bash script and /bin/bash^M: bad interpreter: No such file or directory [duplicate]"
 
-Though there are some tools (e.g. dos2unix) available to convert between DOS/Windows (\r\n) and Unix (\n) line endings, you'd sometimes like to solve this rather simple task with tools available on any linux box you connect to. So, here are some examples - just pick the one that fits you best:
+Though there are some tools (e.g. dos2unix) available to convert between DOS/Windows (\r\n) and Unix (\n) line endings, you'd sometimes like to solve this rather simple task with tools available on any linux box you connect to. So, here are some examples -
 
-perl -pe '$_=~s#\r\n#\n#' < your-prep-script.txt
-
-or
-
-sed -r 's/\r$//' your-prep-script.txt
-
+sed -i -e 's/\r$//' scriptname.sh
 
 This is based on my blog here https://vmwarelab.org/2020/02/14/vsphere-customization-with-cloud-init-while-using-vrealize-automation-8-or-cloud/
