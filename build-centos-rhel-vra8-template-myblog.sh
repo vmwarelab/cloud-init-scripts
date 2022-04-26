@@ -59,16 +59,16 @@ cat <<EOF > /etc/cloud/runonce.sh
 #!/bin/bash
 
 
-rm -rf /etc/cloud/cloud-init.disabled
+sudo rm -rf /etc/cloud/cloud-init.disabled
 sudo cloud-init init
-sleep 20
+sudo sleep 20
 sudo cloud-init modules --mode config
 sudo sleep 20
 sudo cloud-init modules --mode final
 
 touch /tmp/cloud-init.complete
 
-sudo crontab -r
+crontab -r
 
 EOF
 
