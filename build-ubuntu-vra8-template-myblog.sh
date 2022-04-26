@@ -57,7 +57,7 @@ sudo cloud-init modules --mode final
 
 sudo touch /tmp/cloud-init.complete
 
-sudo crontab -r
+crontab -r
 
 EOF
 
