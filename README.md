@@ -18,3 +18,5 @@ Though there are some tools (e.g. dos2unix) available to convert between DOS/Win
 sed -i -e 's/\r$//' scriptname.sh
 
 This is based on my blog here https://vmwarelab.org/2020/02/14/vsphere-customization-with-cloud-init-while-using-vrealize-automation-8-or-cloud/
+
+if you trying to use cloud-init with Ubuntu 20   .. please be aware of this KB https://kb.vmware.com/s/article/80934 as without it cloud-init will not be able to use the OVF as a datasource  therefore userdata will not be passed to the VM when using Cloud-Config in the VMware Cloud Template
