@@ -8,7 +8,9 @@ There are two files for each of the linux distro, the ones with a myblog at the 
 
 **Note after you git clone the repo to your linux machine**
 
-Make sure to Convert Windows-style line endings to Unix-style otherwise you will get an error like this when you try to execute the script :
+Make sure to Convert Windows-style line endings to Unix-style to remove any carriage return character,
+otherwise you will get an error like this when you try to execute the script :
+
 "Bash script and /bin/bash^M: bad interpreter: No such file or directory [duplicate]"
 
 Though there are some tools (e.g. dos2unix) available to convert between DOS/Windows (\r\n) and Unix (\n) line endings, you'd sometimes like to solve this rather simple task with tools available on any linux box you connect to. So, here are some examples -
