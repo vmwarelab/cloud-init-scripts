@@ -78,7 +78,7 @@ After=cloud-init-local.service
 
 [Service]
 ###wait for vmware customization to complete, avoid executing cloud-init at the first startup.###
-ExecStartPre=/bin/sleep 30
+ExecStartPre=/bin/sleep 90
 ExecStart=/etc/cloud/runonce.sh
 
 [Install]
