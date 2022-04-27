@@ -3,7 +3,7 @@
 
 There are 4 scripts that you can execute on base CentOs/RHEL or Ubuntu to install cloud-init and configure the image template to work with vSphere customization with dhcp or ip static assigments
 
-There are two files for each of the linux distro, the ones with a myblog at the end of the file name uses a cron job approach that I used in my blog below and the one without, uses a custom runonce service that we create instead of using a cron job. Both works but at the end these are two different aproaches , your welcome to use which ever one you prefer. 
+There are two files for each of the linux distro, the ones with a myblog at the end of the file name uses a cron job approach that I used in my blog below and the one without, uses a custom runonce service that we create instead of using a cron job. Both works but at the end these are two different approaches  , your welcome to use which ever one you prefer. 
 
 
 **Note after you git clone the repo to your linux machine**
