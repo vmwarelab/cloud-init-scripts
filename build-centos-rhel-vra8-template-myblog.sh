@@ -99,12 +99,12 @@ fi
 
 #cleanup persistent udev rules
 if [ -f /etc/udev/rules.d/70-persistent-net.rules ]; then
-rm /etc/udev/rules.d/70-persistent-net.rules
+sudo rm /etc/udev/rules.d/70-persistent-net.rules
 fi
 
 #cleanup /tmp directories
-rm -rf /tmp/*
-rm -rf /var/tmp/*
+sudo rm -rf /tmp/*
+sudo rm -rf /var/tmp/*
 
 #cleanup current ssh keys
 #rm -f /etc/ssh/ssh_host_*
@@ -112,7 +112,7 @@ rm -rf /var/tmp/*
 #cat /dev/null > /etc/hostname
 
 #cleanup apt
-yum clean all
+sudo yum clean all
 
 #Clean Machine ID
 
@@ -121,7 +121,7 @@ rm /var/lib/dbus/machine-id
 ln -s /etc/machine-id /var/lib/dbus/machine-id
 
 #Clean Cloud-init
-cloud-init clean --logs --seed
+sudo cloud-init clean --logs --seed
 
 #cleanup shell history
 echo > ~/.bash_history
