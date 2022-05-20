@@ -133,7 +133,7 @@ sudo systemctl daemon-reload
 sudo systemctl enable runonce.service
 
 ###clean template. ### 
-sudo /etc/cloud/clean.sh
+sudo sh /etc/cloud/clean.sh
 
 ###shutdown os. ###
-shutdown -h now
+sudo shutdown -h now
