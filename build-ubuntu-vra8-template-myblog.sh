@@ -124,7 +124,7 @@ EOF
 sudo chmod +x /etc/cloud/runonce.sh /etc/cloud/clean.sh
 
 ###clean template. ### 
-sudo /etc/cloud/clean.sh
+sudo sh /etc/cloud/clean.sh
 
 ###shutdown os. ###
-shutdown -h now
+sudo shutdown -h now
