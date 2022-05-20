@@ -43,10 +43,10 @@ sudo sed -i '/^disable_vmware_customization: true/a\network:' /etc/cloud/cloud.c
 sudo sed -i '/^network:/a\  config: disabled' /etc/cloud/cloud.cfg
 
 ###disalbe clean tmp folder. ### 
-SOURCE_TEXT="q /tmp 1777 root root 10d"
-DEST_TEXT="#q /tmp 1777 root root 10d"
+SOURCE_TEXT="v /tmp 1777 root root 10d"
+DEST_TEXT="#v /tmp 1777 root root 10d"
 sudo sed -i "s@${SOURCE_TEXT}@${DEST_TEXT}@g" /usr/lib/tmpfiles.d/tmp.conf
-#sed -i "s/\(^.*10d.*$\)/#\1/" /usr/lib/tmpfiles.d/tmp.conf
+sudo sed -i "s/\(^.*10d.*$\)/#\1/" /usr/lib/tmpfiles.d/tmp.conf
 
 ###Add After=dbus.service to vmtoolsd. ### 
 sudo sed -i '/^After=vgauthd.service/a\After=dbus.service' /usr/lib/systemd/system/vmtoolsd.service
